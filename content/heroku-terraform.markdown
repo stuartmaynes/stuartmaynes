@@ -1,7 +1,8 @@
 Title: Using Terraform to provision Heroku apps
 Category: Terraform
 Tags: Heroku, Terraform
-Date: 20-04-2020 12:00
+Date: 2020-04-19 12:00
+Modified: 2020-04-19 17:05
 Summary: A look at how to use Terraform to provision Heroku apps with add-ons from the Heroku Marketplace, connected via a pipeline.
 
 <p class="notice">This article assumes that you have installed Terraform, have setup an account with Heroku, and are familiar with the Heroku platform and the command line.</p>
@@ -40,7 +41,7 @@ In order to interact with the Platform API we need to provide our Heroku account
 
 #### Inside the configuration file
 
-The provider block for Heroku can be given the name and password parameters. The name parameter is for your email address and the password is your API key.
+The provider block for Heroku can be given the name and password parameters. The name parameter is your email address and the password is your API key.
 ```terraform
 provider "heroku" {
     version = "~>2.0"
@@ -59,7 +60,7 @@ machine api.heroku.com
     login <heroku_account_email>
     password <heroku_api_key>
 ```
-**Note:** if you have previously logged into the the Heroku Toolbelt a `.netrc` file will already be present. In this case simply append your credentials to it instead.
+**Note:** if you have previously logged into the Heroku Toolbelt a `.netrc` file will already be present. In this case simply append your credentials to it instead.
 
 #### Using environment variables
 
@@ -143,7 +144,7 @@ The `apply` command is used to make the changes set out in the configuration fil
 ```
 $ terraform apply
 ```
-An output similar to the one `plan` generates will be displayed in your terminal. This time however, Terrafrom will pause for input.
+An output similar to the one `plan` generates will be displayed in your terminal. This time however, Terraform will pause for input.
 ```text
 Plan: 5 to add, 0 to change, 0 to destroy.
 
