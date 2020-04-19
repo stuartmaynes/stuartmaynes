@@ -329,4 +329,4 @@ There is a lot more to Terraform than what was covered above. Below are some lin
 - [Terraform Heroku provider documentation](https://www.terraform.io/docs/providers/heroku/index.html)
 - [Using variables with Terraform](https://www.terraform.io/docs/configuration/variables.html)
 
-I've uploaded the full configuration file, with a few additions, to my GitHub profile. Please feel free to download it and configure it to your own needs.
+I've uploaded the [full configuration file](https://github.com/stuartmaynes/terraform-heroku), with a few additions, to [my GitHub profile](https://github.com/stuartmaynes). Please feel free to download it and configure it to your own needs.

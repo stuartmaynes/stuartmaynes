@@ -8,24 +8,21 @@
 {% endblock %}
 
 {% block content %}
-{% for article in articles %}
-    <article class="c-article c-article--with-summary" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog" id="{{ article.slug }}">
-        <header class="c-article__header">
-            <h1 class="c-article__title" itemprop="headline">
-                <a href="/{{ article.url }}">{{ article.title }}</a>
-            </h1>
-        </header>
-        <div class="c-article__body" itemprop="text">
-            {{ article.summary }}
-        </div>
-        <footer class="c-article__footer">
-            <p class="c-article__date">
-                Posted: <time itemprop="datePublished" datetime="{{ article.date }}">{{ article.date.strftime('%A %d %B %Y') }}</time>
-                in {% for tag in article.tags|sort %}
-                    <a class="c-article__category" href="/{{ tag.url }}">{{ tag }}</a>{% if loop.index != loop.length %}, {% endif %}
-                {% endfor %}.
-            </p>
-        </footer>
-    </article>
-{% endfor %}
+
+<article class="c-article c-article--index">
+    <div class="c-article__body">
+        <ul class="c-article-list">
+        {% for article in articles %}
+            <li>
+                <div>
+                    <a class="c-article-list__title" href="/{{ article.url }}">{{ article.title }}</a> <time class="c-article-list__date" itemprop="datePublished" datetime="{{ article.date }}">{{ article.date.strftime('%A %d %B %Y') }}</time>
+                </div>
+                <div class="c-article-list__summary">
+                    {{ article.summary }}
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</article>
 {% endblock %}

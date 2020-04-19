@@ -188,7 +188,6 @@ a {
             font-size: 210%;
             line-height: 1.15em;
         }
-
     }
 
     &__heading-anchor {
@@ -214,16 +213,43 @@ a {
         padding-top: 15px;
     }
 
-    &.c-article--with-summary {
-        padding-bottom: 0;
-    }
-
     .notice {
         background-color: lighten($highlight, 48%);
         color: darken($highlight, 30%);
         font-size: 16px;
         line-height: 1.4em;
         padding: 10px;
+    }
+}
+
+.c-article.c-article--index {
+    padding: 0;
+}
+
+.c-article .c-article-list {
+    list-style: none;
+    padding-left: 0;
+
+    &__title {
+        font-size: 110%;
+    }
+
+    &__date {
+        color: #888;
+        font-size: 75%;
+        display: block;
+        padding-top: 10px;
+
+        @include at() {
+            display: inline;
+            float: right;
+            padding-top: 0;
+        }
+    }
+
+    &__summary {
+        padding-top: 10px;
+        font-size: 90%;
     }
 }
 
@@ -261,11 +287,6 @@ a {
 
 .c-footer-links {
     font-weight: bold;
-    text-align: center;
-
-    @include at() {
-        text-align: left;
-    }
 
     &__item {
         display: inline-block;
