@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if INCLUDE_GA %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163561004-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-163561004-1');
+    </script>
+    {% endif %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block meta %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+</head>
+<body class="{{ output_file|replace('/', ' ')|replace('.', ' ') }}">
+    <header class="c-site__header">
+        <div class="c-container">
+        {% if output_file == 'index.html' %}
+            <h1>Stuart Maynes</h1>
+        {% else %}
+            <h1><a href="/">Stuart Maynes</a></h1>
+        {% endif %}
+
+            <p class="c-introduction">
+                Articles about programming.
+            </p>
+        </div>
+    </header>
+
+    <main class="c-site__main">
+        <div class="c-container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer class="c-site__footer">
+        <div class="c-container">
+            <ul class="c-footer-links">
+                {% for link in LINKS %}
+                    <li class="c-footer-links__item"><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </footer>
+
+    <script src="/theme/js/main.js"></script>
+</body>
+</html>

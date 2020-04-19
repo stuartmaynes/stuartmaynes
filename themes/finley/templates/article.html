@@ -1,13 +1,33 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <h1>{{ article.title }}</h1>
-    
-</body>
-</html>
+{% block title %}{{ article.title }} - Stuart Maynes, Software Engineer{% endblock %}
+
+{% block meta %}
+    <meta name="date" content="{{ article.date }}" />
+    <meta name="modified" content="{{ article.modified }}" />
+    <meta name="category" content="{{ article.category }}" />
+    <meta name="authors" content="Stuart Maynes" />
+    <meta name="summary" content="{{ article.summary|striptags }}" />
+    <meta name="description" content="{{ article.summary|striptags }}" />
+{% endblock %}
+
+{% block content %}
+<article class="c-article c-article--single" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog">
+    <header class="c-article__header">
+        <h1 class="c-article__title" itemprop="headline">
+            {{ article.title }}
+        </h1>
+    </header>
+    <div class="c-article__body" itemprop="text">
+        {{ article.content }}
+    </div>
+    <footer class="c-article__footer">
+        <p class="c-article__date">
+            Posted: <time itemprop="datePublished" datetime="{{ article.date }}">{{ article.date.strftime('%A %d %B %Y') }}</time>
+            in {% for tag in article.tags|sort %}
+                <a class="c-article__category" href="/{{ tag.url }}">{{ tag }}</a>{% if loop.index != loop.length %}, {% endif %}
+            {% endfor %}.
+        </p>
+    </footer>
+</article>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ page.title }} - Stuart Maynes, Software Engineer{% endblock %}
+
+{% block meta %}
+    <meta name="date" content="{{ page.date }}" />
+    <meta name="modified" content="{{ page.modified }}" />
+    <meta name="authors" content="Stuart Maynes" />
+    <meta name="summary" content="{{ page.summary|striptags }}" />
+{% endblock %}
+
+{% block content %}
+
+    <article class="c-article" id="{{ page.slug }}">
+        <div class="c-article__body">
+            {{ page.content }}
+        </div>
+    </article>
+
+{% endblock %}

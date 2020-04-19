@@ -1,0 +1,290 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.highlight {
+  background-color: #F5F5F5;
+  font-family: monospace;
+  color: #111;
+}
+.highlight .kn, .highlight .k, .highlight .ow, .highlight .nb {
+  color: #226CC6;
+  font-weight: bold;
+}
+.highlight .nc, .highlight .nf {
+  font-weight: bold;
+}
+.highlight .s1 {
+  color: #226CC6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: #1E2C35;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  padding: 15px 0;
+}
+@media screen and (min-width: 1020px) {
+  body {
+    font-size: 120%;
+    padding: 40px;
+  }
+}
+
+.c-container {
+  max-width: 680px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+sup {
+  font-size: 50%;
+  font-weight: bold;
+  position: relative;
+  top: -10px;
+  right: -1px;
+}
+
+a {
+  color: #226CC6;
+  position: relative;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  top: 1px;
+}
+
+.c-article {
+  background-color: #fff;
+  padding: 80px 0;
+}
+.c-article:first-child {
+  padding: 40px 0 80px;
+}
+.c-article h1 {
+  margin-bottom: 20px;
+}
+.c-article h2, .c-article h3, .c-article h4, .c-article h5, .c-article h6 {
+  margin-bottom: 15px;
+  margin-top: 50px;
+}
+.c-article h2 {
+  font-size: 125%;
+}
+@media screen and (min-width: 1020px) {
+  .c-article h2 {
+    font-size: 140%;
+  }
+}
+.c-article h3 {
+  font-size: 115%;
+}
+@media screen and (min-width: 1020px) {
+  .c-article h3 {
+    font-size: 120%;
+  }
+}
+.c-article p, .c-article li {
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+.c-article ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.c-article__body a {
+  text-decoration: underline;
+}
+.c-article .highlight {
+  border-radius: 2px;
+  font-size: 80%;
+  line-height: 2em;
+  margin-bottom: 25px;
+  overflow-x: scroll;
+  padding: 15px;
+}
+.c-article .highlight pre, .c-article code {
+  font-family: menlo, monospace;
+}
+.c-article p code {
+  background-color: #f5f5f5;
+  border-radius: 2px;
+  color: #226CC6;
+  font-size: 90%;
+  padding: 0 3px;
+}
+.c-article .comment {
+  color: #888;
+  font-size: 75%;
+  margin-top: -20px;
+  position: relative;
+  display: block;
+}
+.c-article__categories {
+  color: #888;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 80%;
+  margin-bottom: 40px;
+}
+.c-article__category {
+  color: #888;
+  display: inline-block;
+}
+.c-article__category:hover {
+  color: #226CC6;
+}
+.c-article__title {
+  font-size: 180%;
+  margin-top: 0;
+  padding-bottom: 10px;
+}
+.c-article__title a {
+  color: #000;
+}
+@media screen and (min-width: 1020px) {
+  .c-article__title {
+    font-size: 200%;
+  }
+}
+.c-article__heading-anchor {
+  color: #000;
+  text-decoration: none !important;
+}
+.c-article__heading-anchor:hover:before, .c-article__heading-anchor:active:before, .c-article__heading-anchor:target:before {
+  bottom: 3px;
+  color: #DDD;
+  content: "#";
+  display: block;
+  font-weight: normal;
+  left: -20px;
+  position: absolute;
+}
+.c-article__footer {
+  border-top: 1px solid #DDD;
+  color: #888;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 75%;
+  padding-top: 15px;
+}
+
+.c-site__footer,
+.c-site__header {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 80%;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 1020px) {
+  .c-site__footer,
+.c-site__header {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+}
+
+.c-site__header h1 {
+  font-size: 110%;
+}
+.c-site__header h1 a {
+  color: #000;
+}
+.c-site__header .c-introduction {
+  line-height: 1.45em;
+  padding-top: 10px;
+}
+.c-site__header .c-introduction a:before {
+  content: ", ";
+  display: inline-block;
+  padding: 0 4px 0 0;
+}
+.c-site__header .c-introduction a:first-child:before {
+  display: none;
+}
+
+.c-footer-links {
+  text-align: center;
+}
+@media screen and (min-width: 1020px) {
+  .c-footer-links {
+    text-align: left;
+  }
+}
+.c-footer-links__item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.c-footer-links__item a {
+  color: #000;
+}
+
+/*# sourceMappingURL=main.css.map */
