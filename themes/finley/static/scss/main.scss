@@ -5,37 +5,44 @@ $sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @import 'reset';
 @import 'pygments';
 
-@mixin at($width: 1020px) {
-    @media screen and (min-width: $width) {
+@mixin at($width: 1020px)
+{
+    @media screen and (min-width: $width)
+    {
         @content;
     }
 }
 
-@mixin antialiased {
+@mixin antialiased
+{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+*
+{
     box-sizing: border-box;
 }
 
-body {
+body
+{
     background-color: white;
     font-family: $sans-serif;
     font-size: 100%;
     padding: 15px 0;
 
-    @include at() {
+    @include at()
+    {
         font-size: 110%;
         padding: 40px;
     }
 }
 
-.c-container {
+.c-container
+{
     max-width: 640px;
     margin: auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 h1, h2, h3, h4, h5, h6
@@ -43,15 +50,18 @@ h1, h2, h3, h4, h5, h6
     font-weight: bold;
 }
 
-b, strong {
+b, strong
+{
     font-weight: bold;
 }
 
-i, em {
+i, em
+{
     font-style: italic;
 }
 
-sup {
+sup
+{
     font-size: 50%;
     font-weight: bold;
     position: relative;
@@ -59,7 +69,8 @@ sup {
     right: -1px;
 }
 
-a {
+a
+{
     color: $highlight;
     position: relative;
     text-decoration: none;
@@ -68,13 +79,8 @@ a {
 }
 
 
-.c-article {
-    padding: 80px 0;
-
-    &:first-child {
-        padding: 40px 0 80px;
-    }
-
+.c-article
+{
     h2, h3, h4, h5, h6
     {
         margin-bottom: 15px;
@@ -90,18 +96,21 @@ a {
         margin-top: 30px;
     }
 
-    h2 {
+    h2
+    {
         font-size: 130%;
         border-bottom: 1px solid #DDD;
         margin-top: 50px;
         padding-bottom: 10px;
 
-        @include at() {
+        @include at()
+        {
             font-size: 145%;
         }
     }
 
-    h3 {
+    h3
+    {
         font-size: 120%;
 
         @include at() {
@@ -109,34 +118,42 @@ a {
         }
     }
 
-    h4 {
+    h4
+    {
         font-size: 110%;
     }
 
-    p, li {
+    p, li
+    {
         color: #222;
         line-height: 1.55em;
     }
 
-    p, ol, ul {
+    p, ol, ul
+    {
         margin-bottom: 20px;
     }
 
-    ul {
+    ul
+    {
         list-style: disc;
         padding-left: 20px;
     }
 
-    li {
+    li
+    {
         margin-bottom: 3px;
     }
 
-    &__body a {
+    &__body a
+    {
         text-decoration: underline;
     }
 
-    .highlight {
+    .highlight
+    {
         border-radius: 2px;
+        // background-color: #f8f8f8;
         font-size: 80%;
         line-height: 2em;
         margin-bottom: 25px;
@@ -144,11 +161,14 @@ a {
         padding: 15px;
     }
 
-    .highlight pre, code {
+    .highlight pre,
+    code
+    {
         font-family: menlo, monospace;
     }
 
-    p code {
+    p code
+    {
         background-color: #f5f5f5;
         border-radius: 2px;
         color: darken($highlight, 25%);
@@ -156,7 +176,8 @@ a {
         padding: 1px 4px;
     }
 
-    .comment {
+    .comment
+    {
         color: $grey;
         font-size: 75%;
         margin-top: -20px;
@@ -164,19 +185,22 @@ a {
         display: block;
     }
 
-    &__categories {
+    &__categories
+    {
         color: $grey;
         font-family: $sans-serif;
         font-size: 80%;
         margin-bottom: 40px;
     }
 
-    &__category {
+    &__category
+    {
         color: $highlight;
         display: inline-block;
     }
 
-    &__title {
+    &__title
+    {
         font-size: 160%;
         margin-bottom: 15px;
         margin-top: 0;
@@ -184,17 +208,22 @@ a {
 
         a { color: #000; }
 
-        @include at() {
+        @include at()
+        {
             font-size: 210%;
             line-height: 1.15em;
         }
     }
 
-    &__heading-anchor {
+    &__heading-anchor
+    {
         color: #000;
         text-decoration: none !important;
 
-        &:hover:before, &:active:before, &:target:before {
+        &:hover:before,
+        &:active:before,
+        &:target:before
+        {
             bottom: 3px;
             color: #DDD;
             content: "#";
@@ -205,7 +234,8 @@ a {
         }
     }
 
-    &__footer {
+    &__footer
+    {
         border-top: 1px solid #DDD;
         color: $grey;
         font-family: $sans-serif;
@@ -213,7 +243,8 @@ a {
         padding-top: 15px;
     }
 
-    .notice {
+    .notice
+    {
         background-color: lighten($highlight, 48%);
         color: darken($highlight, 30%);
         font-size: 16px;
@@ -222,19 +253,23 @@ a {
     }
 }
 
-.c-article.c-article--index {
+.c-article.c-article--index
+{
     padding: 0;
 }
 
-.c-article .c-article-list {
+.c-article .c-article-list
+{
     list-style: none;
     padding-left: 0;
 
-    &__title {
+    &__title
+    {
         font-size: 110%;
     }
 
-    &__date {
+    &__date
+    {
         color: #888;
         font-size: 75%;
         display: block;
@@ -247,48 +282,59 @@ a {
         }
     }
 
-    &__summary {
+    &__summary
+    {
         padding-top: 10px;
         font-size: 90%;
     }
 }
 
 .c-site__footer,
-.c-site__header {
+.c-site__header
+{
     font-family: $sans-serif;
     font-size: 80%;
     padding-bottom: 60px;
     padding-top: 60px;
 }
 
-.c-site__header {
-    h1 {
+.c-site__header
+{
+    h1
+    {
         font-size: 110%;
         a { color: #000; }
     }
-    .c-introduction {
+
+    .c-introduction
+    {
         line-height: 1.45em;
         padding-top: 10px;
 
-        a {
+        a
+        {
 
-            &:before {
+            &:before
+            {
                 content: ', ';
                 display: inline-block;
                 padding: 0 4px 0 0;
             }
 
-            &:first-child:before {
+            &:first-child:before
+            {
                 display: none;
             }
         }
     }
 }
 
-.c-footer-links {
+.c-footer-links
+{
     font-weight: bold;
 
-    &__item {
+    &__item
+    {
         display: inline-block;
         margin-right: 10px;
 
