@@ -5,7 +5,7 @@ Software developer. I prefer working with Python, Django, and Flask, but I'm ver
 A few things I've built.
 
 - [Culture Fix](https://culturefix.digital/)
-- [Royal Adcedemy's Young Artists’ Summer Show](https://youngartists.royalacademy.org.uk/)
+- [Royal Academy's Young Artists’ Summer Show](https://youngartists.royalacademy.org.uk/)
 - [Bridge Theatre](https://bridgetheatre.co.uk/)
 - [Bridgewater Hall](https://www.bridgewater-hall.co.uk/)
 
