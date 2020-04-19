@@ -298,7 +298,7 @@ A vars file can be provided using the  `-var-file` option. A vars file has the f
 app_name = "my-app"
 app_region = "eu"
 ```
-If a `.json` file is used the the variables have to be declared using the JSON format.
+If a `.json` file is used the variables have to be declared using the JSON format.
 ```json
 {
     "app_name": "my-app",
