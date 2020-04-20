@@ -133,10 +133,10 @@ $ terraform plan
 Running `terraform plan` will produce a diff, of which there is a snippet below. The presence of a `+` indicates an addition, a `~` represents a change, and `-` represents a removal. At this stage you should see a `+` for all resources.
 ```text
 # heroku_pipeline.pipeline will be created
-    + resource "heroku_pipeline" "pipeline" {
-        + id   = (known after apply)
-        + name = "my-app-pipeline"
-    }
++ resource "heroku_pipeline" "pipeline" {
+    + id   = (known after apply)
+    + name = "my-app-pipeline"
+}
 ```
 ### Apply
 
