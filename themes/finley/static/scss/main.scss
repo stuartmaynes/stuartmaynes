@@ -81,6 +81,7 @@ a
 
 .c-article
 {
+
     h2, h3, h4, h5, h6
     {
         margin-bottom: 15px;
@@ -171,7 +172,7 @@ a
     {
         background-color: #f5f5f5;
         border-radius: 2px;
-        color: darken($highlight, 25%);
+        color: darken($highlight, 20%);
         font-size: 85%;
         padding: 1px 4px;
     }
@@ -201,17 +202,21 @@ a
 
     &__title
     {
+        border-bottom: 1px solid #DDD;
         font-size: 160%;
+        line-height: 1.25em;
         margin-bottom: 15px;
         margin-top: 0;
-        padding-bottom: 4px;
+        padding-bottom: 15px;
 
         a { color: #000; }
 
         @include at()
         {
-            font-size: 210%;
+            font-size: 175%;
+            letter-spacing: -0.5px;
             line-height: 1.15em;
+            margin-bottom: 20px;
         }
     }
 
