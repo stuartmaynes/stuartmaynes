@@ -37,7 +37,7 @@ AUTHOR_FEED_RSS = None
 LINKS = (
             ('Home', '/'),
             ('About', '/about'),
-            ('Twitter', 'https://twiiter.com/mrmaynes'),
+            ('Twitter', 'https://twitter.com/mrmaynes'),
             ('Github', 'https://github.com/stuartmaynes'),
         )
 
