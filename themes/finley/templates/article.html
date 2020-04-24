@@ -31,3 +31,8 @@
     </footer>
 </article>
 {% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="/theme/js/progress.js"></script>
+{% endblock scripts %}
