@@ -22,14 +22,10 @@
     <header class="c-site__header">
         <div class="c-container">
         {% if output_file == 'index.html' %}
-            <h1>Stuart Maynes</h1>
+            <h1 class="c-site-title">Stuart Maynes</h1>
         {% else %}
-            <h1><a href="/">Stuart Maynes</a></h1>
+            <h1 class="c-site-title"><a href="/">Stuart Maynes</a></h1>
         {% endif %}
-
-            <p class="c-introduction">
-                Articles about programming.
-            </p>
         </div>
     </header>
 
@@ -41,9 +37,9 @@
 
     <footer class="c-site__footer">
         <div class="c-container">
-            <ul class="c-footer-links">
+            <ul class="c-links">
                 {% for link in LINKS %}
-                    <li class="c-footer-links__item"><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+                    <li class="c-links__item"><a href="{{ link[1] }}">{{ link[0] }}</a></li>
                 {% endfor %}
             </ul>
         </div>

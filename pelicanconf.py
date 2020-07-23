@@ -37,8 +37,8 @@ AUTHOR_FEED_RSS = None
 LINKS = (
             ('Home', '/'),
             ('About', '/about'),
-            ('Twitter', 'https://twitter.com/stuartmaynes'),
             ('Github', 'https://github.com/stuartmaynes'),
+            ('Twitter', 'https://twitter.com/stuartmaynes'),
         )
 
 DEFAULT_PAGINATION = 25

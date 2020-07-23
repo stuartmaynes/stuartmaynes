@@ -28,11 +28,12 @@ body
 {
     background-color: white;
     font-family: $sans-serif;
+    font-size: 110%;
     padding: 15px 0;
 
     @include at()
     {
-        font-size: 125%;
+        font-size: 120%;
         padding: 40px;
     }
 }
@@ -73,8 +74,9 @@ a
     color: $highlight;
     position: relative;
     text-decoration: none;
-    &:hover { text-decoration: underline; }
-    &:active { top: 1px; }
+    &:focus { outline: 4px solid red; }
+    &:hover { text-decoration: underline; outline: none; }
+    &:active { top: 1px; outline: none; }
 }
 
 
@@ -96,7 +98,7 @@ a
         margin-top: 30px;
     }
 
-    h2
+    &--single h2
     {
         font-size: 130%;
         border-bottom: 1px solid #DDD;
@@ -125,7 +127,7 @@ a
 
     p, li
     {
-        color: #222;
+        color: #333;
         line-height: 1.55em;
     }
 
@@ -212,7 +214,7 @@ a
 
         @include at()
         {
-            font-size: 175%;
+            font-size: 170%;
             letter-spacing: -0.5px;
             line-height: 1.15em;
             margin-bottom: 20px;
@@ -243,7 +245,7 @@ a
         border-top: 1px solid #DDD;
         color: $grey;
         font-family: $sans-serif;
-        font-size: 75%;
+        font-size: 80%;
         padding-top: 15px;
     }
 
@@ -260,33 +262,21 @@ a
 .c-article.c-article--index
 {
     padding: 0;
+
+
 }
 
-.c-article .c-article-list
+.c-article--index
 {
     list-style: none;
     padding-left: 0;
 
-    &__title
-    {
-        font-size: 110%;
+    .c-article__title {
+        border-bottom: none;
+        padding-bottom: 0;
     }
 
-    &__date
-    {
-        color: #888;
-        font-size: 75%;
-        display: block;
-        padding-top: 10px;
-
-        @include at() {
-            display: inline;
-            float: right;
-            padding-top: 0;
-        }
-    }
-
-    &__summary
+    .c-article__summary
     {
         padding-top: 10px;
         font-size: 90%;
@@ -331,9 +321,13 @@ a
             }
         }
     }
+
+    @include at() {
+        padding-bottom: 100px;
+    }
 }
 
-.c-footer-links
+.c-links
 {
     font-weight: bold;
 
