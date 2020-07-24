@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
     // Select all h2, h3, and h4 headings in an article
     const articleHeadings = document.querySelectorAll(
-        '.c-article h2, .c-article h3, .c-article h4'
+        '.c-article--single h2, .c-article--single h3, .c-article--single h4'
     )
     // Loop through them to add an achor tag.
     articleHeadings.forEach((heading) => {
