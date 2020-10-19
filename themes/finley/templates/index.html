@@ -5,29 +5,23 @@
 {% block meta %}
     <meta name="authors" content="Stuart Maynes" />
     <meta name="description" content="Articles about programming using Python." />
-{% endblock %}
+    {% endblock %}
 
-{% block content %}
-    {% for article in articles %}
-    <article class="c-article c-article--index">
-        <header class="c-article__header">
-            <h2 class="c-article__title"><a href="/{{ article.url }}">{{ article.title }}</a></h2>
-        </header>
-
-        <div class="c-article__body">
-            {{ article.summary }}
-        </div>
-
-        <footer class="c-article__footer">
-            <p>
-                Posted: <time class="c-article__date" itemprop="datePublished" datetime="{{ article.date }}">{{ article.date.strftime('%A %d %B %Y') }}</time>
-                in {% for tag in article.tags|sort %}
-                    <a class="c-article__category" href="/{{ tag.url }}">{{ tag }}</a>{% if loop.index != loop.length %}, {% endif %}
-                {% endfor %}.
-            </p>
-        </footer>
-    </article>
-    {% endfor %}
+    {% block content %}
+    <div class="c-introduction">
+        <p>
+            Software developer. I prefer working with Python, Django, and Flask,
+            but I'm very well versed in PHP and WordPress. Technical Director at
+            <a href="https://substrakt.com/">Substrakt</a>.
+            I have a <a href="https://github.com/stuartmaynes/">
+                GitHub profile</a> and I'm contactable via
+            <a href="https://twitter.com/stuartmaynes">Twitter @stuartmaynes</a>.
+        </p>
+    </div>
+    <ol class="c-list">
+        <li class="c-list__title">Articles</li>
+        {% include '_article-list.html' %}
+    </ol>
 {% endblock %}
 
 {% block scripts %}

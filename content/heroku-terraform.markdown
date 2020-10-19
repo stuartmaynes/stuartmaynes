@@ -1,11 +1,11 @@
-Title: Using Terraform to provision Heroku apps
+Title: Terraform: provisioning Heroku apps
 Category: Terraform
 Tags: Heroku, Terraform
 Date: 2020-04-19 12:00
 Modified: 2020-04-19 17:05
 Summary: A look at how to use Terraform to provision Heroku apps with add-ons from the Heroku Marketplace, connected via a pipeline.
 
-<p class="notice">This article assumes that you have installed Terraform, have setup an account with Heroku, and are familiar with the Heroku platform and the command line.</p>
+<p class="c-notice">This article assumes that you have installed Terraform, have setup an account with Heroku, and are familiar with the Heroku platform and the command line.</p>
 
 The aim of this article is to guide you through the process of creating a Terraform configuration for Heroku. The configuration will provision two apps, linked via a pipeline, as well as add-ons from the Marketplace. The final configuration can then be used as a template, which you can then tailor to your requirements - automating the process of provisioning an Heroku infrastructure.
 

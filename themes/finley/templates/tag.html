@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Stuart Maynes, Software Engineer{% endblock %}
+
+{% block meta %}
+    <meta name="authors" content="Stuart Maynes" />
+    <meta name="description" content="Articles about programming using Python." />
+    {% endblock %}
+
+{% block content %}
+    <ol class="c-list">
+        <li class="c-list__title">{{ tag }} articles</li>
+        {% include '_article-list.html' %}
+    </ol>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock scripts %}

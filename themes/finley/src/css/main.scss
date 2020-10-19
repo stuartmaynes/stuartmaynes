@@ -1,0 +1,194 @@
+@import 'reset';
+@import 'fonts';
+
+$space: 20px;
+$highlight: #1b6ac9;
+$sm: "min-width: 300px";
+$md: "min-width: 600px";
+$dark: "prefers-color-scheme: dark";
+
+@mixin heading {
+    h1, h2, h3, h4, h5, h6 {
+        @content;
+    }
+}
+
+body {
+    color: #222;
+    font-family: 'Graphik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.45em;
+    @media ($md) { font-size: 120%; }
+    @media ($dark) {
+        background: #111;
+        color: #DDD;
+    }
+}
+
+a {
+    color: #1b6ac9;
+    text-decoration: underline;
+    @media ($dark) { color: #FFF; }
+}
+
+.c-container {
+    margin: $space auto;
+    max-width: 760px;
+    padding: 0 $space;
+
+    @media ($md) {
+        margin: ($space * 2) auto;
+    }
+}
+
+.c-list {
+    &__title {
+        font-weight: 700;
+        padding-top: $space;
+        font-size: 120%;
+        margin-bottom: $space;
+    }
+
+    &__link {
+        font-size: 115%;
+        font-weight: 700;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    &__item {
+        padding: $space 0 $space 0;
+    }
+
+    time {
+        padding-top: 10px;
+    }
+}
+
+.c-introduction {
+    margin-bottom: $space * 2;
+}
+
+.c-article {
+    @include heading {
+        font-weight: 700;
+        margin: $space * 1.5 0 $space / 2.5;
+        a {
+            color: #000;
+            text-decoration: none;
+            padding-top: $space;
+
+            @media ($dark) { color: #EEE; }
+        }
+    }
+
+    h2 {
+        font-size: 130%;
+        margin: $space * 3 0 $space / 2;
+        a { text-decoration: underline; }
+    }
+
+    &__header &__title {
+        font-size: 160%;
+        line-height: 1.15em;
+        margin-bottom: $space;
+        @media ($dark) { color: #EEE; }
+    }
+
+    p, ul, ol, pre code, img {
+        margin-bottom: $space;
+    }
+
+    p a, li a { text-decoration: underline; }
+
+    ul { list-style: disc; }
+
+    ol, ul {
+        padding-left: 20px;
+
+        li { margin-bottom: $space / 2; }
+    }
+
+    pre code {
+        display: block;
+        line-height: 1.4em;
+        font-size: 80%;
+        padding: 5px;
+        overflow-x: auto;
+        @media ($sm) { padding: $space / 2; }
+        @media ($md) { padding: $space; }
+    }
+
+    code {
+        color: #333;
+        background-color: #F5F5F5;
+        font-family: menlo, 'Courier New', Courier, monospace;
+        font-size: 90%;
+
+        .c1 { color: #AAA; }
+
+        @media ($dark) {
+            background-color: #222;
+            color: #F5F5F5;
+        }
+    }
+}
+
+.c-notice {
+    background-color: lighten($highlight, 45%);
+    color: darken($highlight, 20%);
+    line-height: 1.4em;
+    padding: $space / 1.5;
+    font-size: 85%;
+
+    @media ($dark) {
+        background-color: #580DE1;
+        color: #FFF;
+     }
+}
+
+.c-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        display: inline-block;
+        padding: ($space / 2) 0;
+        width: 50%;
+
+        @media ($sm) {
+            margin-right: 2.5%;
+            padding: $space 0;
+            width: auto;
+        }
+    }
+}
+
+.c-site-header {
+    font-size: 85%;
+
+    .c-links__item {
+        color: #000;
+        text-decoration: none;
+        font-weight: 500;
+
+        @media ($dark) { color: #EEE; }
+    }
+}
+
+
+.u-inline-block {
+    display: inline-block;
+}
+
+.u-small {
+    font-size: 80%;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-flex-col {
+    display: flex;
+    flex-direction: column;
+}

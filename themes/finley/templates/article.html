@@ -22,9 +22,9 @@
         {{ article.content }}
     </div>
     <footer class="c-article__footer">
-        <p class="c-article__date">
-            Posted: <time itemprop="datePublished" datetime="{{ article.date }}">{{ article.date.strftime('%A %d %B %Y') }}</time>
-            in {% for tag in article.tags|sort %}
+        <p class="c-article__date u-small">
+            <time itemprop="datePublished" datetime="{{ article.date }}">{{ article.date.strftime('%B %Y') }}</time>
+            &mdash; {% for tag in article.tags|sort %}
                 <a class="c-article__category" href="/{{ tag.url }}">{{ tag }}</a>{% if loop.index != loop.length %}, {% endif %}
             {% endfor %}.
         </p>
@@ -34,5 +34,4 @@
 
 {% block scripts %}
     {{ super() }}
-    <script src="/theme/js/progress.js"></script>
 {% endblock scripts %}

@@ -1,6 +1,6 @@
 Title: About
 
-Software developer. I prefer working with Python, Django, and Flask, but I'm very well versed in PHP and WordPress. Technical Director at [Substrakt](https://substrakt.com/). Contactable on [Twitter @stuartmaynes](https://twitter.com/stuartmaynes). I have a [GitHub profile](https://github.com/stuartmaynes/).
+Software developer. I prefer working with Python, Django, and Flask, but I'm very well versed in PHP and WordPress. Technical Director at [Substrakt](https://substrakt.com/). I have a [GitHub profile](https://github.com/stuartmaynes/) and I'm contactable on [Twitter @stuartmaynes](https://twitter.com/stuartmaynes).
 
 A few things I've built.
 

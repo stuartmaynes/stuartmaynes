@@ -19,24 +19,31 @@
     <link rel="stylesheet" href="/theme/css/main.css">
 </head>
 <body class="{{ output_file|replace('/', ' ')|replace('.', ' ') }}">
-    <header class="c-site__header c-container">
-        {% if output_file == 'index.html' %}
-            <h1 class="c-site-title">Stuart Maynes</h1>
-        {% else %}
-            <h1 class="c-site-title"><a href="/">Stuart Maynes</a></h1>
-        {% endif %}
+    <header class="c-site-header">
+        <div class="c-container">
+            <nav class="c-links">
+                <a class="c-links__item c-site-name" href="/">Stuart Maynes</a>
+                {% for link in HEADER_LINKS %}
+                    <a class="c-links__item" href="{{ link[1] }}">{{ link[0] }}</a>
+                {% endfor %}
+            </nav>
+        </div>
     </header>
 
-    <main class="c-site__main c-container">
-        {% block content %}{% endblock %}
+    <main class="c-site-main">
+        <div class="c-container">
+            {% block content %}{% endblock %}
+        </div>
     </main>
 
-    <footer class="c-site__footer c-container">
-        <nav class="c-links">
-            {% for link in LINKS %}
-                <a class="c-links__item" href="{{ link[1] }}">{{ link[0] }}</a>
-            {% endfor %}
-        </nav>
+    <footer class="c-site-footer">
+        <div class="c-container">
+            <nav class="c-links">
+                {% for link in FOOTER_LINKS %}
+                    <a class="c-links__item" href="{{ link[1] }}">{{ link[0] }}</a>
+                {% endfor %}
+            </nav>
+        </div>
     </footer>
 
 {% block scripts %}
