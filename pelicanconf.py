@@ -34,12 +34,12 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (
-            ('Home', '/'),
-            ('About', '/about'),
-            ('Github', 'https://github.com/stuartmaynes'),
-            ('Twitter', 'https://twitter.com/stuartmaynes'),
-        )
+HEADER_LINKS = ()
+
+FOOTER_LINKS = (
+    ('Github', 'https://github.com/stuartmaynes'),
+    ('Twitter', 'https://twitter.com/stuartmaynes'),
+)
 
 DEFAULT_PAGINATION = 25
 
