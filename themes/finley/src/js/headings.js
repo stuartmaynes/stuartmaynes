@@ -6,7 +6,9 @@ window.addEventListener('load', () => {
     // Loop through them to add an achor tag.
     articleHeadings.forEach((heading) => {
         let text = heading.innerHTML
-        let slug = heading.innerHTML.toLowerCase().replace(/\s/gi, '-')
+        let slug = heading.innerText.toLowerCase().replace(/\s/gi, '-')
+
+        heading.classList.add('pt-0')
         heading.innerHTML = `<a class="c-article__heading-anchor" id="${slug}" href="#${slug}">${text}</a>`
     })
     // As the anchors are added via JavaScript if anyone arrives

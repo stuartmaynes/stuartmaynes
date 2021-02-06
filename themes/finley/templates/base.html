@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Pelican" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/theme/images//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/theme/images//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/theme/images//favicon-16x16.png">
+    <link rel="manifest" href="/theme/images/site.webmanifest">
+    {% block meta %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
     {% if GOOGLE_ANALYTICS %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163561004-1"></script>
@@ -11,43 +21,16 @@
         gtag('config', 'UA-163561004-1');
     </script>
     {% endif %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% block meta %}{% endblock %}
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/theme/css/main.css">
 </head>
 <body class="{{ output_file|replace('/', ' ')|replace('.', ' ') }}">
     <header class="c-site-header">
         <div class="c-container">
-            <nav class="c-links">
-                <a class="c-links__item c-site-name" href="/">Stuart Maynes</a>
-                {% for link in HEADER_LINKS %}
-                    <a class="c-links__item" href="{{ link[1] }}">{{ link[0] }}</a>
-                {% endfor %}
-            </nav>
+            <h4 class="c-site-name"><a href="/">Stuart Maynes</a></h4>
         </div>
     </header>
-
-    <main class="c-site-main">
-        <div class="c-container">
-            {% block content %}{% endblock %}
-        </div>
-    </main>
-
-    <footer class="c-site-footer">
-        <div class="c-container">
-            <nav class="c-links">
-                {% for link in FOOTER_LINKS %}
-                    <a class="c-links__item" href="{{ link[1] }}">{{ link[0] }}</a>
-                {% endfor %}
-            </nav>
-        </div>
-    </footer>
-
-{% block scripts %}
+    {% block content %}{% endblock %}
+    {% block scripts %}
     <script src="/theme/js/main.js"></script>
-{% endblock scripts %}
+    {% endblock scripts %}
 </body>
 </html>

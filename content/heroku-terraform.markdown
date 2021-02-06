@@ -141,7 +141,7 @@ Running `terraform plan` will produce a diff, of which there is a snippet below.
 ### Apply
 
 The `apply` command is used to make the changes set out in the configuration file.
-```
+```text
 $ terraform apply
 ```
 An output similar to the one `plan` generates will be displayed in your terminal. This time however, Terraform will pause for input.
