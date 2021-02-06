@@ -1,29 +1,23 @@
 {% extends 'base.html' %}
 
-{% block title %}Stuart Maynes, Software Engineer{% endblock %}
+{% block title %}{{ SITENAME }}{% endblock %}
 
-{% block meta %}
-    <meta name="authors" content="Stuart Maynes" />
-    <meta name="description" content="Articles about programming using Python." />
-    {% endblock %}
-
-    {% block content %}
-    <div class="c-introduction">
-        <p>
+{% block content %}
+<section class="c-container">
+    <div class="c-content">
+        <p class="c-intro">
             Software developer. I prefer working with Python, Django, and Flask,
             but I'm very well versed in PHP and WordPress. Technical Director at
             <a href="https://substrakt.com/">Substrakt</a>.
             I have a <a href="https://github.com/stuartmaynes/">
                 GitHub profile</a> and I'm contactable via
-            <a href="https://twitter.com/stuartmaynes">Twitter @stuartmaynes</a>.
+                <a href="https://twitter.com/stuartmaynes">Twitter @stuartmaynes</a>.
         </p>
+        <ol class="c-archive-list">
+            {% for article in dates %}
+                {% include '_list.html' %}
+            {% endfor %}
+        </ol>
     </div>
-    <ol class="c-list">
-        <li class="c-list__title">Articles</li>
-        {% include '_article-list.html' %}
-    </ol>
-{% endblock %}
-
-{% block scripts %}
-{{ super() }}
-{% endblock scripts %}
+</section>
+{% endblock%}

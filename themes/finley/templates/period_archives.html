@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Archives | {{ SITENAME }}{% endblock %}
+
+{% block meta %}
+    <meta name="authors" content="Stuart Maynes" />
+    <meta name="summary" content="Archives for {{ SITENAME }}" />
+{% endblock %}
+
+{% block content %}
+<section class="c-container">
+    <div class="c-article">
+        <h4>Archives</h4>
+        <ol class="c-archive-list">
+            {% set year = articles[0].date.strftime('%Y') %}
+            <li class="c-archive-list__title">{{ year }}</li>
+            {% for article in dates %}
+                {% if article.date.strftime('%Y') != year %}
+                    {% set year = article.date.strftime('%Y') %}
+                    <li class="c-archive-list__title">{{ year }}</li>
+                {% endif %}
+
+                {% include '_list.html' %}
+            {% endfor %}
+        </ol>
+    </div>
+</section>
+{% endblock%}

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ page.title }} - Stuart Maynes, Software Engineer{% endblock %}
+{% block title %}{{ page.title }} | {{ SITENAME }}{% endblock %}
 
 {% block meta %}
     <meta name="date" content="{{ page.date }}" />
@@ -10,15 +10,9 @@
 {% endblock %}
 
 {% block content %}
-
-    <article class="c-article" id="{{ page.slug }}">
-        <div class="c-article__body">
-            {{ page.content }}
-        </div>
-    </article>
-
-{% endblock %}
-
-{% block scripts %}
-{{ super() }}
-{% endblock scripts %}
+<section class="c-container">
+    <div class="c-article" id="{{ page.slug }}">
+        {{ page.content }}
+    </div>
+</section>
+{% endblock%}

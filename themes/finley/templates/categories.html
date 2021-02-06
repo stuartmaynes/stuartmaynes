@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Categories | {{ SITENAME }}{% endblock %}
+
+{% block meta %}
+    <meta name="authors" content="Stuart Maynes" />
+    <meta name="summary" content="Categories on {{ SITENAME }}" />
+{% endblock %}
+
+{% block content %}
+<section class="c-container">
+    <div class="c-article">
+        <h4>Categories</h4>
+        <ol class="c-archive-list">
+            {% for category, articles in categories|sort %}
+            <li class="c-archive-list__title">
+                <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+            </li>
+                {% for article in articles %}
+                    {% include '_list.html' %}
+                {% endfor %}
+            {% endfor %}
+        </ol>
+    </div>
+</section>
+{% endblock%}

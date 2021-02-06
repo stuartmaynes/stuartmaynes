@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ article.title }} - Stuart Maynes, Software Engineer{% endblock %}
+{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
 
 {% block meta %}
     <meta name="date" content="{{ article.date }}" />
@@ -9,29 +9,28 @@
     <meta name="authors" content="Stuart Maynes" />
     <meta name="summary" content="{{ article.summary|striptags }}" />
     <meta name="description" content="{{ article.summary|striptags }}" />
+    {% if article.status == 'draft' %}
+    <meta name="robots" content="noindex" />
+    {% endif %}
 {% endblock %}
 
 {% block content %}
-<article class="c-article c-article--single" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog">
-    <header class="c-article__header">
-        <h1 class="c-article__title" itemprop="headline">
-            {{ article.title }}
-        </h1>
-    </header>
-    <div class="c-article__body" itemprop="text">
-        {{ article.content }}
-    </div>
-    <footer class="c-article__footer">
-        <p class="c-article__date u-small">
-            <time itemprop="datePublished" datetime="{{ article.date }}">{{ article.date.strftime('%B %Y') }}</time>
-            &mdash; {% for tag in article.tags|sort %}
-                <a class="c-article__category" href="/{{ tag.url }}">{{ tag }}</a>{% if loop.index != loop.length %}, {% endif %}
-            {% endfor %}.
-        </p>
-    </footer>
-</article>
-{% endblock %}
+<section class="c-container">
 
-{% block scripts %}
-    {{ super() }}
-{% endblock scripts %}
+    <article class="c-article c-article--single" id="{{ article.slug }}">
+
+        <header class="c-article__header">
+            <time class="c-article__date" itemprop="datePublished" datetime="{{ article.date }}">
+                {{ article.locale_date }}
+            </time>
+            <h1>{{ article.title }}</h1>
+        </header>
+
+        <div class="c-article__body">
+            {{ article.content }}
+        </div>
+
+    </article>
+
+</section>
+{% endblock%}
