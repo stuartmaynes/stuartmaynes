@@ -8,8 +8,9 @@ window.addEventListener('load', () => {
         let text = heading.innerHTML
         let slug = heading.innerText.toLowerCase().replace(/\s/gi, '-')
 
-        heading.classList.add('pt-0')
-        heading.innerHTML = `<a class="c-article__heading-anchor" id="${slug}" href="#${slug}">${text}</a>`
+        heading.id = slug
+        heading.classList.add('c-article__heading')
+        heading.innerHTML = `<a class="c-article__heading-anchor" href="#${slug}">${text}</a>`
     })
     // As the anchors are added via JavaScript if anyone arrives
     // at the site with a hash in the URL it won't work natively.

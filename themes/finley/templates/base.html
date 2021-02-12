@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="generator" content="Pelican" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/theme/images//apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/theme/images//favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/theme/images//favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/theme/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/theme/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/theme/images/favicon-16x16.png">
     <link rel="manifest" href="/theme/images/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto+Slab:wght@600&display=swap&family=Cookie&display=swap" rel="stylesheet">
     {% block meta %}{% endblock %}
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="/theme/css/main.css">
@@ -22,7 +24,7 @@
     </script>
     {% endif %}
 </head>
-<body class="{{ output_file|replace('/', ' ')|replace('.', ' ') }}">
+<body class="{{ output_file|replace('/', ' ')|replace('.', ' ') }}" data-file="{{ output_file }}">
     <header class="c-site-header">
         <div class="c-container">
             <h4 class="c-site-name"><a href="/">Stuart Maynes</a></h4>
