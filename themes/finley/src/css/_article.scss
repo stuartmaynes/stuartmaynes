@@ -1,9 +1,7 @@
 .c-article {
 
-    h2 a, h3 a, h4 a {
-        padding-top: 1em;
-        display: inline-block;
-        text-decoration: none;
+    &__title, &__heading, &__date {
+        font-family: 'Roboto Slab', serif;
     }
 
     h2 {
@@ -11,22 +9,31 @@
     }
 
     h3, h4 {
-        margin-block-end: -0em;
+        margin-bottom: -10px;
     }
 
     h2, h3, h4 {
         padding-top: 1em;
     }
 
-    h3, h4 {
-        margin-bottom: -10px;
+    h2 {
+        font-size: 28px;
     }
 
-    .pt-0 {
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    &__heading {
         padding-top: 0;
     }
 
     code {
+        border-radius: 2px;
         background-color: #F5F6F7;
         font-size: 18px;
         padding: 1px;
@@ -41,9 +48,19 @@
         font-size: 16px;
     }
 
+    p a, li a {
+        color: darken($color, 10%);
+        text-decoration: underline;
+    }
+
     &__date {
+        font-family: arial, sans-serif;
         font-size: 14px;
         font-weight: bold;
+    }
+
+    &__footer {
+        padding: 40px 0;
     }
 }
 
@@ -52,8 +69,10 @@
 }
 
 .c-notice {
-    background-color: #5a40df;
+    border-radius: 2px;
+    background-color: lighten($color, 30%);
     padding: 15px;
     font-size: 16px;
-    color: #FFF;
+    line-height: 1.4em;
+    font-family: arial, sans-serif;
 }
