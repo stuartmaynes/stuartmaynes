@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 AUTHOR = 'Stuart Maynes'
 SITENAME = 'Stuart Maynes'
 SITEURL = 'http://127.0.0.1:8080'
+SITE_DESC = "I'm a software engineer."
 
-PATH = 'content/Blog'
 PATH = '/Users/stuartmaynes/Library/Mobile Documents/com~apple~CloudDocs/Stuart Maynes/Blog'
 
 TIMEZONE = 'Europe/London'
