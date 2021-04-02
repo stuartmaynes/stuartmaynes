@@ -4,15 +4,18 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Stuart Maynes'
 SITENAME = 'Stuart Maynes'
-SITEURL = 'http://127.0.0.1:8000'
+SITEURL = 'http://127.0.0.1:8080'
 
-PATH = 'content'
+PATH = 'content/Blog'
+PATH = '/Users/stuartmaynes/Library/Mobile Documents/com~apple~CloudDocs/Stuart Maynes/Blog'
 
 TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = 'en'
 
 THEME = './themes/finley'
+
+# PATH = '/Users/stuartmaynes/Library/Mobile Documents/27N4MQEA55~pro~writer/Documents/Blog'
 
 ARCHIVES_SAVE_AS = 'articles/index.html'
 
@@ -55,19 +58,48 @@ AUTHOR_FEED_RSS = None
 HEADER_LINKS = ()
 
 FOOTER_LINKS = (
+    ('About', f'{SITEURL}/about/'),
     ('Github', 'https://github.com/stuartmaynes'),
     ('Twitter', 'https://twitter.com/stuartmaynes'),
+    # ('Categories', f'{SITEURL}/articles/categories/'),
+    # ('Tags', f'{SITEURL}/articles/tags/'),
+    ('RSS', FEED_ALL_ATOM),
 )
 
 DEFAULT_PAGINATION = 25
 
-# Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = False
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
 
-PYGMENTS_RST_OPTIONS = {'classprefix': 'pgcss', 'linenos': 'table'}
+# Uncomment following line if you want document-relative URLs when developing
+# RELATIVE_URLS = True
+
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {
+            'footnotes': {},
+        },
+        'markdown.extensions.meta': {},
+        'markdown.extensions.toc': {
+            'anchorlink': 'true',
+            'anchorlink_class': 'c-anchor'
+        },
+    },
+    'output_format': 'html5',
+}
+
+PYGMENTS_RST_OPTIONS = {
+    'classprefix': 'pgcss',
+    'linenos': 'table'
+}
 
 TYPOGRIFY = True
 
 DEFAULT_DATE_FORMAT = '%B %d, %Y'
 
 LOCALE = ('en_GB')
+
+DEFAULT_DATE = 'fs'
+FILENAME_METADATA = r'(?P<date>\d{4}-\d{2}-\d{2})\s(?P<title>.*)'
