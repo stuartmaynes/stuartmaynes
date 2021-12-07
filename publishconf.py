@@ -24,7 +24,7 @@ ANALYTICS = True
 
 FOOTER_LINKS = (
     ('About', f'{SITEURL}/about/'),
-    ('Github', 'https://github.com/stuartmaynes'),
+    ('GitHub', 'https://github.com/stuartmaynes'),
     ('Twitter', 'https://twitter.com/stuartmaynes'),
     # ('Categories', f'{SITEURL}/articles/categories/'),
     # ('Tags', f'{SITEURL}/articles/tags/'),

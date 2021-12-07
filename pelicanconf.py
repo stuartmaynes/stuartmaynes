@@ -4,10 +4,10 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Stuart Maynes'
 SITENAME = 'Stuart Maynes'
-SITEURL = 'http://127.0.0.1:8080'
+SITEURL = 'http://127.0.0.1:8000'
 SITE_DESC = "I'm a software engineer."
 
-PATH = '/Users/stuartmaynes/Library/Mobile Documents/com~apple~CloudDocs/Stuart Maynes/Blog'
+PATH = '/Users/stuartmaynes/Library/Mobile Documents/iCloud~md~obsidian/Documents/Stuart Maynes/Blog'
 
 TIMEZONE = 'Europe/London'
 
@@ -59,10 +59,10 @@ HEADER_LINKS = ()
 
 FOOTER_LINKS = (
     ('About', f'{SITEURL}/about/'),
-    ('Github', 'https://github.com/stuartmaynes'),
+    ('GitHub', 'https://github.com/stuartmaynes'),
     ('Twitter', 'https://twitter.com/stuartmaynes'),
-    # ('Categories', f'{SITEURL}/articles/categories/'),
-    # ('Tags', f'{SITEURL}/articles/tags/'),
+    ('Categories', f'{SITEURL}/articles/categories/'),
+    ('Tags', f'{SITEURL}/articles/tags/'),
     ('RSS', FEED_ALL_ATOM),
 )
 
